@@ -17,7 +17,7 @@ import { prepmate } from "@/lib/schema";
 import { v4 as uuidv4 } from "uuid";
 import { useUser } from "@clerk/nextjs";
 import moment from "moment";
-import { parse } from "dotenv";
+import { useRouter } from "next/navigation";
 
 const AddInterview = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -26,6 +26,7 @@ const AddInterview = () => {
   const [yearsOfExperience, setYearsOfExperience] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [jsonResponse, setJsonResponse] = useState([]);
+  const router = useRouter();
   const { user } = useUser();
 
   const handleSubmit = async (e) => {
@@ -63,6 +64,10 @@ const AddInterview = () => {
         })
         .returning({ mockId: prepmate.mockId });
       console.log("inserted ID: ", response);
+      if (response) {
+        setOpenDialog(false);
+        router.push("/dashboard/interview/"+response[0]?.mockId);
+      }
     } else {
       console.log("ERROR : No Response");
     }
