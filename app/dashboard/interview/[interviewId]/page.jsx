@@ -9,6 +9,7 @@ import {
   LoaderPinwheelIcon,
   WebcamIcon,
 } from "lucide-react";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { use } from "react"; // Import the `use` hook
 import Webcam from "react-webcam";
@@ -105,7 +106,9 @@ const Interview = ({ params }) => {
       </div>
 
       <div className="flex justify-end items-end w-full">
-        <Button className="bg-blue-400 mt-20">Start Interview</Button>
+        <Link href={"/dashboard/interview/" + unwrappedParams.interviewId + "/start"}>
+          <Button className="bg-blue-400 mt-20">Start Interview</Button>
+        </Link>
       </div>
     </div>
   );
