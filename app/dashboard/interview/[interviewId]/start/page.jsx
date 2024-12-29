@@ -31,7 +31,7 @@ const StartInterview = ({ params }) => {
   };
 
   return (
-    <div className="mb-10">
+    <div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Questions*/}
         <QuestionsSection
@@ -46,8 +46,7 @@ const StartInterview = ({ params }) => {
           interviewData={interviewData}
         />
       </div>
-
-      <div className="flex justify-end gap-5 mt-10">
+      <div className="flex justify-end gap-5">
         {activeQuestionIndex > 0 && (
           <Button
             onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
