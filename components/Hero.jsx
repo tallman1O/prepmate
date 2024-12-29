@@ -6,11 +6,11 @@ import { useRouter } from "next/navigation";
 export const Hero = () => {
   const router = useRouter();
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-[#faf9c7eb] to-[#deb3f0]">
+    <div className="relative overflow-hidden bg-gradient-to-br from-[#faf9c7eb] to-[#deb3f0] min-h-50%">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="animate-fade-up text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Master Your Interview Skills with AI
+            Master Your Interview Skills with Prepmate.
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
             Practice interviews with our AI interviewer. Get instant feedback,
