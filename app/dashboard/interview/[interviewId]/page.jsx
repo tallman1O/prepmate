@@ -5,7 +5,6 @@ import { prepmate } from "@/lib/schema";
 import { eq } from "drizzle-orm";
 import {
   Lightbulb,
-  Loader2,
   LoaderPinwheelIcon,
   WebcamIcon,
 } from "lucide-react";

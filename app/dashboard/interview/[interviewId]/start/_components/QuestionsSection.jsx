@@ -1,4 +1,4 @@
-import { Lightbulb, SpeakerIcon, Volume2Icon } from "lucide-react";
+import { Lightbulb,  Volume2Icon } from "lucide-react";
 import React from "react";
 
 const QuestionsSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {

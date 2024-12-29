@@ -38,7 +38,11 @@ const StartInterview = ({ params }) => {
         />
 
         {/*Video Audio Recording*/}
-        <RecordAnswerSection />
+        <RecordAnswerSection
+          mockInterviewQuestion={mockInterviewQuestion}
+          activeQuestionIndex={activeQuestionIndex}
+          interviewData={interviewData}
+        />
       </div>
     </div>
   );
