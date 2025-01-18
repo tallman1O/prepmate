@@ -15,7 +15,6 @@ import Image from "next/image";
 import Link from "next/link";
 import ColourfulText from "../components/ui/colourful-text";
 
-
 function App() {
   return (
     <div className="min-h-screen bg-[#f4f1de] text-gray-900">
@@ -64,18 +63,18 @@ function App() {
             {[
               {
                 icon: <BrainCircuit className="h-12 w-12 text-black" />,
-                title: "AI-Powered Feedback",
-                desc: "Instant feedback on responses & communication style.",
+                title: "AI-Powered Question Generation",
+                desc: "Get unique questions every time based on the Job Role and Description.",
               },
               {
                 icon: <Mic2 className="h-12 w-12 text-black" />,
-                title: "Voice Analysis",
-                desc: "Analyze tone, pace, and clarity with AI.",
+                title: "Video-Enhanced Interview Simulation",
+                desc: "Users can record their responses with optional video functionality.",
               },
               {
                 icon: <Users className="h-12 w-12 text-black" />,
-                title: "Industry-Specific",
-                desc: "Tailored questions for your field.",
+                title: "Personalized Improvement Roadmap",
+                desc: "Original response analysis with Specific improvement suggestions.",
               },
             ].map((feature, index) => (
               <motion.div
@@ -100,10 +99,10 @@ function App() {
               <h2 className="text-3xl font-bold uppercase">See How It Works</h2>
               <ul className="space-y-4 mt-4">
                 {[
-                  "Choose from hundreds of interview scenarios",
-                  "Practice with AI that adapts to your responses",
-                  "Get detailed feedback and improvement suggestions",
-                  "Track your progress over time",
+                  "Simulates real-world interview scenarios.",
+                  "Custom interview questions based on job role & experience.",
+                  "Get detailed feedback and improvement suggestions.",
+                  "Track progress and practice again.",
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -120,7 +119,7 @@ function App() {
             </div>
             <div className="relative border-4 border-black rounded-lg shadow-[5px_5px_0px_#000]">
               <Image
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80"
+                src="/assets/working-image.png"
                 alt="Person in interview"
                 className="rounded-sm"
                 width={800}
@@ -141,13 +140,13 @@ function App() {
             Join thousands of professionals improving with AI.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <a
-              href="#"
+            <Link
+              href="/dashboard"
               className="mt-6 inline-flex items-center px-8 py-4 bg-yellow-400 text-black font-semibold text-lg border-4 border-black rounded-lg shadow-[5px_5px_0px_#000] hover:bg-yellow-500"
             >
               Get Started Free
               <ChevronRight className="ml-2 h-5 w-5" />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </SectionWrapper>
