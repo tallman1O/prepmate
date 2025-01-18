@@ -86,7 +86,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5. Open a Pull Request
 
 ## 📄 Canva PPT 
-Link to the Canva PPT: [PrepMate - AI Mock Interview Platform]([text](https://www.canva.com/design/DAGcjq4Nq6A/UBbAJjGEzFxUQBtb_4IEtw/view?utm_content=DAGcjq4Nq6A&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel))
+Link to the Canva PPT: [PrepMate - AI Mock Interview Platform](https://www.canva.com/design/DAGcjq4Nq6A/UBbAJjGEzFxUQBtb_4IEtw/view?utm_content=DAGcjq4Nq6A&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 
 
 ## 👏 Acknowledgments
