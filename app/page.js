@@ -15,6 +15,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ColourfulText from "../components/ui/colourful-text";
 
+
 function App() {
   return (
     <div className="min-h-screen bg-[#f4f1de] text-gray-900">

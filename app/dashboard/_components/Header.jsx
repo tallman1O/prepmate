@@ -4,6 +4,7 @@ import { Bot } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React from "react";
 
+
 const Header = () => {
   const path = usePathname();
 
@@ -15,7 +16,7 @@ const Header = () => {
         <Bot className="h-6 w-6 text-black" />
       </div>
 
-      {/* Navigation Links */}
+      {/* Navigation Links
       <ul className="hidden md:flex gap-6 font-semibold text-gray-700 text-lg">
         {["dashboard", "questions", "upgrade", "working"].map((item) => (
           <li
@@ -30,7 +31,7 @@ const Header = () => {
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </li>
         ))}
-      </ul>
+      </ul> */}
 
       {/* User Profile Button */}
       <UserButton />

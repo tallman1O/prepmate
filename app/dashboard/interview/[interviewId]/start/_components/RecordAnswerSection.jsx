@@ -28,7 +28,7 @@ const RecordAnswerSection = ({
     results,
     startSpeechToText,
     stopSpeechToText,
-    setResults
+    setResults,
   } = useSpeechToText({
     continuous: true,
     useLegacyResults: false,
@@ -94,7 +94,7 @@ const RecordAnswerSection = ({
   };
 
   return (
-    <div>
+    <div className="p-10 border-4 border-black rounded-2xl my-10 shadow-lg">
       <div
         className={`flex flex-col my-20 ${
           webCamEnabled ? " py-0 " : " py-20"
@@ -126,7 +126,7 @@ const RecordAnswerSection = ({
       <div className="w-full flex justify-center gap-5">
         <Button
           disabled={isLoading}
-          className="bg-blue-400 hover:bg-blue-800"
+          className="bg-blue-600 text-white hover:bg-blue-800 border-4 border-blue-700"
           onClick={SaveUserRecording}
         >
           {isRecording ? (
@@ -143,21 +143,20 @@ const RecordAnswerSection = ({
         {webCamEnabled ? (
           <Button
             onClick={() => setWebCamEnabled(false)}
-            className=" bg-blue-400"
+            className="bg-blue-600 text-white hover:bg-blue-800 border-4 border-blue-700"
           >
             Disable Web Cam and Microphone
           </Button>
         ) : (
           <Button
             onClick={() => setWebCamEnabled(true)}
-            className=" border-2 border-blue-600"
+            className="border-4 border-blue-600 text-blue-600 hover:bg-blue-100"
             variant="ghost"
           >
             Enable Web Cam and Microphone
           </Button>
         )}
       </div>
-      
     </div>
   );
 };

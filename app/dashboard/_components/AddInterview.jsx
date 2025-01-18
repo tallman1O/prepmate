@@ -66,70 +66,83 @@ const AddInterview = () => {
       console.log("inserted ID: ", response);
       if (response) {
         setOpenDialog(false);
-        router.push("/dashboard/interview/"+response[0]?.mockId);
+        router.push("/dashboard/interview/" + response[0]?.mockId);
       }
     } else {
       console.log("ERROR : No Response");
     }
     setIsLoading(false);
   };
+
   return (
     <div>
       <div
-        className="p-10 border rounded-lg border-gray-200 cursor-pointer bg-secondary hover:scale-105 transition-all duration-300 hover:shadow-md"
+        className="p-10 border-4 border-black rounded-lg cursor-pointer bg-[#f4f1de] hover:scale-105 transition-all duration-300 hover:shadow-[4px_4px_0px_#000] relative"
         onClick={() => setOpenDialog(true)}
       >
-        <h2 className="font-semibold text-lg text-center">+ Add New</h2>
+        <h2 className="font-semibold text-xl text-center">+ Add New</h2>
       </div>
+
       <Dialog open={openDialog}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle className="text-2xl">
+            <DialogTitle className="text-2xl font-bold text-gray-800">
               Tell Us More About Your Job Interview
             </DialogTitle>
             <DialogDescription>
               <form onSubmit={handleSubmit}>
                 <div className="my-2">
-                  <h2>
-                    Add Details about your Job Position/Role, Job Description
+                  <h2 className="text-lg">
+                    Add Details about your Job Position/Role, Job Description,
                     and Year of Experience
                   </h2>
                   <div className="mt-8 mb-2">
-                    <label>Job Position/Role</label>
+                    <label className="text-lg font-semibold">
+                      Job Position/Role
+                    </label>
                     <Input
-                      placeholder="Enter Job Position/Role : Ex. Full Stack Developer"
+                      placeholder="Enter Job Position/Role: Ex. Full Stack Developer"
                       required
                       onChange={(e) => setJobPosition(e.target.value)}
+                      className="border-4 border-black text-lg p-2 rounded-md shadow-[4px_4px_0px_#000]"
                     />
                   </div>
                   <div className="mt-8 mb-2">
-                    <label>Job Description/Tech Stack (Keep it Concise)</label>
+                    <label className="text-lg font-semibold">
+                      Job Description/Tech Stack
+                    </label>
                     <Textarea
                       placeholder="Enter the Job Description: Ex. React, MongoDB, Express, AWS"
                       required
                       onChange={(e) => setJobDescription(e.target.value)}
+                      className="border-4 border-black text-lg p-2 rounded-md shadow-[4px_4px_0px_#000]"
                     />
                   </div>
                   <div className="mt-8 mb-2">
-                    <label>Years of Experience</label>
+                    <label className="text-lg font-semibold">
+                      Years of Experience
+                    </label>
                     <Input
                       placeholder="Enter Your Experience Years: Ex. 5"
                       type="number"
                       required
                       onChange={(e) => setYearsOfExperience(e.target.value)}
+                      className="border-4 border-black text-lg p-2 rounded-md shadow-[4px_4px_0px_#000]"
                     />
                   </div>
                 </div>
+
                 <div className="flex justify-end mt-5 gap-4">
                   <Button
                     variant="destructive"
                     onClick={() => setOpenDialog(false)}
                     type="button"
+                    className="bg-red-500 hover:bg-red-600 border border-red-700"
                   >
                     Cancel
                   </Button>
                   <Button
-                    className="bg-blue-400 border border-blue-600"
+                    className="bg-blue-400 border-4 border-blue-600 text-lg shadow-[4px_4px_0px_#000]"
                     type="submit"
                     disabled={isLoading}
                   >

@@ -16,10 +16,13 @@ import { useRouter } from "next/navigation";
 const Feedback = ({ params }) => {
   const router = useRouter();
   const [feedbackList, setFeedbackList] = useState([]);
+
   useEffect(() => {
     getFeedback();
   }, []);
+
   const unwrappedParams = use(params);
+
   const getFeedback = async () => {
     const result = await db
       .select()
@@ -27,52 +30,48 @@ const Feedback = ({ params }) => {
       .where(eq(answerByUser.mockIdRef, unwrappedParams.interviewId))
       .orderBy(answerByUser.id);
 
-    console.log(result);
     setFeedbackList(result);
   };
+
   return (
-    <div className="p-10">
-      {feedbackList.length == 0 ? (
-        <h2 className="text-3xl flex justify-center mt-44 font-bold text-red-600">
+    <div className="p-12 text-white">
+      {feedbackList.length === 0 ? (
+        <h2 className="text-4xl font-extrabold text-red-500 text-center mt-40">
           404 No Interview Feedback Record Found!
         </h2>
       ) : (
         <>
-          <h2 className="text-3xl font-bold text-green-600">
+          <h2 className="text-4xl font-extrabold text-green-600 mb-4">
             Congratulations!
           </h2>
-          <h2 className="font-semibold text-2xl mt-1">
-            Following are your Interview Feedback :
+          <h2 className="text-2xl text-black font-semibold mb-4">
+            Below are your Interview Feedback:
           </h2>
-          <h2 className="text-lg my-4">
-            Your Overall Interview Rating: <strong>7/10</strong>
-          </h2>
-          <h2 className="text-sm text-gray-500">
-            Find Below Interview Questions with Correct Answer, Your Answer and
-            Feedback for Improvement:{" "}
+          <h2 className="text-sm text-gray-400 mb-10">
+            Find below Interview Questions with Correct Answer, Your Answer, and
+            Feedback for Improvement:
           </h2>
           {feedbackList &&
             feedbackList.map((item, index) => (
-              <Collapsible key={index} className="mt-7">
-                <CollapsibleTrigger className="flex gap-5 justify-between p-2 bg-secondary rounded-lg my-2 text-left">
-                  {item.question} <ChevronsUpDownIcon className="size-5" />
+              <Collapsible key={index} className="mt-10">
+                <CollapsibleTrigger className="flex justify-between items-center gap-6 p-4 bg-indigo-500 text-white rounded-xl shadow-lg hover:bg-red-800 transition-all">
+                  <span className="flex-1">{item.question}</span>
+                  <ChevronsUpDownIcon className="text-white text-xl" />
                 </CollapsibleTrigger>
-                <CollapsibleContent>
-                  <div className="flex flex-col gap-4">
-                    <h2 className="text-red-500 p-2 border rounded-lg">
-                      <strong>Rating: </strong>
-                      {item.rating}
+                <CollapsibleContent className="p-6 rounded-lg shadow-xl">
+                  <div className="flex flex-col gap-6">
+                    <h2 className="text-xl font-bold text-red-400 bg-red-50 p-4 rounded-lg border-4 border-red-500">
+                      <strong>Rating:</strong> {item.rating}
                     </h2>
-                    <h2 className="p-2 border rounded-lg">
-                      <strong>Your Answer: </strong>
-                      {item.userAns}
+                    <h2 className="text-lg p-4 text-blue-500 bg-blue-50 border-4 border-blue-500 rounded-lg">
+                      <strong>Your Answer:</strong> {item.userAns}
                     </h2>
-                    <h2 className="p-2 border rounded-lg">
-                      <strong>Feedback Based on Your Answer: </strong>
+                    <h2 className="text-lg p-4 text-yellow-500 bg-yellow-50 border-4 border-yellow-500 rounded-lg">
+                      <strong>Feedback Based on Your Answer:</strong>{" "}
                       {item.feedback}
                     </h2>
-                    <h2 className="p-2 border rounded-lg">
-                      <strong>Recommended Answer Example: </strong>
+                    <h2 className="text-lg p-4 text-green-500 bg-green-50 border-4 border-green-500 rounded-lg">
+                      <strong>Recommended Answer Example:</strong>{" "}
                       {item.correctAns}
                     </h2>
                   </div>
@@ -81,10 +80,10 @@ const Feedback = ({ params }) => {
             ))}
         </>
       )}
-      <div className="my-10">
+      <div className="mt-12 flex justify-center">
         <Button
           onClick={() => router.replace("/dashboard")}
-          className="bg-blue-700 hover:bg-blue-500"
+          className="bg-blue-700 hover:bg-blue-500 p-4 rounded-lg text-white font-bold shadow-xl"
         >
           Back to Dashboard
         </Button>
