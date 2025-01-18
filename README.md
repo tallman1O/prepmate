@@ -30,17 +30,20 @@ This project was developed as a submission for the **CSI RenAIssance Hackathon**
 ## 🚀 Getting Started
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/prepmate.git
 cd prepmate
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Set up environment variables:
+
 ```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
@@ -49,6 +52,7 @@ DATABASE_URL=
 ```
 
 4. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -85,6 +89,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## 📄 Canva PPT
+
+Link to the Canva PPT: [PrepMate - AI Mock Interview Platform](<[https://www.canva.com/design/DAEJ9Q1Q9ZI/1Q1Q9ZI/1Q1Q9ZI](https://www.canva.com/design/DAGcjq4Nq6A/UBbAJjGEzFxUQBtb_4IEtw/view?utm_content=DAGcjq4Nq6A&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)>)
 
 ## 👏 Acknowledgments
 

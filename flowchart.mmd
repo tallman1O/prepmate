@@ -1,0 +1,35 @@
+flowchart TD
+    Start([User Starts]) --> Auth[User Authentication]
+    Auth --> Input[Input Job Details]
+    Input --> Gen[AI Generates Questions]
+    
+    subgraph Interview["Interview Process"]
+        Gen --> Q1[Question 1]
+        Q1 --> Rec1[Record Response]
+        Rec1 --> Q2[Question 2]
+        Q2 --> Rec2[Record Response]
+        Rec2 --> Q3[Question 3]
+        Q3 --> Rec3[Record Response]
+        Rec3 --> Q4[Question 4]
+        Q4 --> Rec4[Record Response]
+        Rec4 --> Q5[Question 5]
+    end
+    
+    Interview --> Eval[AI Evaluation]
+    
+    subgraph Feedback["Feedback Generation"]
+        Eval --> Ana[Answer Analysis]
+        Ana --> Sug[Improvement Suggestions]
+        Sug --> Mod[Model Answer]
+        Mod --> Rate[Rating Generation]
+    end
+    
+    Feedback --> Save[Save to Dashboard]
+    
+    Save --> Choice{User Choice}
+    Choice -->|Review| Dashboard[View Previous Interviews]
+    Choice -->|Retry| Input
+    Choice -->|Exit| End([End Session])
+    
+    style Interview fill:#f0f7ff,stroke:#4a90e2
+    style Feedback fill:#f7f0ff,stroke:#9b51e0
