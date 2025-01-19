@@ -19,6 +19,11 @@ This project was developed as a submission for the **CSI RenAIssance Hackathon**
 - **Personal Dashboard**: Track your progress and review previous interviews
 - **Practice Mode**: Retake interviews to improve your performance
 
+
+## 🚨 Caution: Browser Compatibility
+
+For the best experience, we recommend using Google Chrome or Safari as your browser. Other browsers may have limited functionality.
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: NextJS, TailwindCSS
@@ -87,6 +92,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 Canva PPT 
 Link to the Canva PPT: [PrepMate - AI Mock Interview Platform](https://www.canva.com/design/DAGcjq4Nq6A/UBbAJjGEzFxUQBtb_4IEtw/view?utm_content=DAGcjq4Nq6A&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
+
+## 📹 Demo Video
+Here’s a quick demo of how PrepMate works:
+Drive Link to the Demo Video: [PrepMate - AI Mock Interview Platform](https://drive.google.com/drive/folders/1xvDzYcNYdYnIR9Gp2qYwu81RuVsqA3rq?usp=sharing)
 
 
 ## 👏 Acknowledgments
