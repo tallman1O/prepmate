@@ -30,7 +30,7 @@ const QuestionsSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
             ))}
         </div>
         <h2 className="my-5 text-lg font-semibold text-black">
-          {mockInterviewQuestion[activeQuestionIndex]?.question}
+          {mockInterviewQuestion[activeQuestionIndex].question}
         </h2>
         <Volume2Icon
           className="cursor-pointer text-black hover:text-blue-600"
